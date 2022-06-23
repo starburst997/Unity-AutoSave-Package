@@ -36,9 +36,11 @@ namespace Tarodev {
 
                 var path = GetConfigPath();
 
-                if (path == null) {
-                    AssetDatabase.CreateAsset(CreateInstance<AutoSaveConfig>(), $"Assets/{nameof(AutoSaveConfig)}.asset");
-                    Debug.Log("A config file has been created at the root of your project.<b> You can move this anywhere you'd like.</b>");
+                if (path == null)
+                {
+                    AssetDatabase.CreateFolder("Assets", "Tarodev");
+                    AssetDatabase.CreateFolder("Assets/Tarodev", "Unity-AutoSave");
+                    AssetDatabase.CreateAsset(CreateInstance<AutoSaveConfig>(), $"Assets/Tarodev/Unity-AutoSave/{nameof(AutoSaveConfig)}.asset");
                     continue;
                 }
 
@@ -71,14 +73,6 @@ namespace Tarodev {
                 EditorSceneManager.SaveOpenScenes();
                 if (_config.Logging) Debug.Log($"Auto-saved at {DateTime.Now:h:mm:ss tt}");
             }
-        }
-        
-        [MenuItem("Window/Auto save/Find config")]
-        public static void ShowConfig() {
-            FetchConfig();
-
-            var path = GetConfigPath();
-            EditorGUIUtility.PingObject(AssetDatabase.LoadAssetAtPath<AutoSaveConfig>(path).GetInstanceID());
         }
 
         public override void OnInspectorGUI() {
