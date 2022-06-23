@@ -1,0 +1,21 @@
+{
+  "name": "com.tarodev.unity-autosave",
+  "version": "1.0.0",
+  "displayName": "Unity AutoSave",
+  "description": "Add a simple auto save feature to Unity which fires every set interval.",
+  "unity": "2021.3",
+  "unityRelease": "1f1",
+  "documentationUrl": "https://github.com/Matthew-J-Spencer/Unity-AutoSave",
+  "changelogUrl": "https://example.com/changelog.html",
+  "licensesUrl": "https://opensource.org/licenses/MIT",
+  "keywords": [
+    "autosave",
+    "save"
+  ],
+  "author": {
+    "name": "Tarodev",
+    "email": "matt@tarodev.com",
+    "url": "https://www.patreon.com/tarodev"
+  },
+  "hideInEditor": false
+}
