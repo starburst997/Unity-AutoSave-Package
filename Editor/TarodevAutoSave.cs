@@ -40,7 +40,7 @@ namespace Tarodev {
                 {
                     AssetDatabase.CreateFolder("Assets", "Tarodev");
                     AssetDatabase.CreateFolder("Assets/Tarodev", "Unity-AutoSave");
-                    AssetDatabase.CreateAsset(CreateInstance<AutoSaveConfig>(), $"Assets/Tarodev/Unity-AutoSave/{nameof(AutoSaveConfig)}.asset");
+                    AssetDatabase.CreateAsset(CreateInstance<AutoSaveConfig>(), $"Assets/Packages/Unity-AutoSave/{nameof(AutoSaveConfig)}.asset");
                     continue;
                 }
 
